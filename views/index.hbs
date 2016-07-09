@@ -1,2 +1,14 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h1>Cool Places and Shit!</h1>
+<a href="/create">Tell Me about a Cool Fucking Place You've Been!!</a>
+
+<ul>
+{{#each post}}
+<li>
+  <a href="/{{this.id}}">{{this.title}}</a>
+  <br>
+  <img src="{{this.image}}" alt="image">
+  <br>
+
+</li>
+{{/each}}
+</ul>

@@ -1,0 +1,20 @@
+<h2> {{post.title}} </h2>
+<div class='detail_div'>
+<a class='detail' href="/">HOME</a>
+<a class='detail' href='/{{post.id}}/edit'>EDIT</a>
+<a class='detail' href='/{{post.id}}/delete'>DELETE</a>
+</div>
+<img src='{{post.image}}' alt='photo'>
+<p> Description of this place: </p>
+<p> {{post.content}} </p>
+<form action="/comment" method="post">
+  <input type="text" name="text" value="" placeholder="add comment">
+  <button type="sumbit" name="">submit</button>
+</form>
+<ul>
+  {{#each comment}}
+    <li>
+      {{this.text}}
+    </li>
+  {{/each}}
+</ul>

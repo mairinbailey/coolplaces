@@ -1,0 +1,8 @@
+<h1>Edit this shit</h1>
+<br>
+<form action='/{{post.id}}/edit' method='post'>
+  <input type="text" name="title" placeholder='Name of the cool place' value="{{post.title}}">
+  <input type="url" name="image" placeholder='A sweet pic, bro' value="{{post.image}}">
+  <textarea name="content" placeholder='Describe that Ish' >{{post.content}}</textarea>
+  <button type='submit'> ADD THIS PLACE!</button>
+</form>
